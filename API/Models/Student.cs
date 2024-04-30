@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
+// remember that the model shapes how the data will be organized
 namespace API.Models
 {
     public class Student
