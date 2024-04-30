@@ -34,7 +34,7 @@ namespace API.Controllers
 
         public async Task<IActionResult> Create(Student student)
         {
-            if(!ModelState.IsValid);
+            if(!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
