@@ -10,9 +10,8 @@ import {
   VStack,
   Input,
   Textarea,
-  Text,
-  Switch,
   useToast,
+  Text,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { BASE_URL } from "../constant";
@@ -71,7 +70,7 @@ const StudentForm = ({
       .catch((error) => {
         console.log(error);
       });
-    console.log(student);
+    // console.log(student);
   };
 
   // add student function
@@ -94,7 +93,7 @@ const StudentForm = ({
         console.log(error);
       });
 
-    console.log(student);
+    // console.log(student);
   };
 
   return (
@@ -108,6 +107,7 @@ const StudentForm = ({
           <ModalCloseButton />
           <ModalBody>
             <VStack gap={3} alignItems={"self-start"}>
+                <Text>Name</Text>
               <Input
                 type="text"
                 placeholder="Name"
@@ -116,6 +116,7 @@ const StudentForm = ({
                   setStudent({ ...student, name: e.target.value })
                 }
               />
+              <Text>Address</Text>
               <Textarea
                 placeholder="Address"
                 value={student.address}
@@ -123,6 +124,7 @@ const StudentForm = ({
                   setStudent({ ...student, address: e.target.value })
                 }
               />
+              <Text>Phone Number</Text>
               <Input
                 type="text"
                 placeholder="Phone Number"
@@ -131,6 +133,7 @@ const StudentForm = ({
                   setStudent({ ...student, phoneNumber: e.target.value })
                 }
               />
+              <Text>E-mail</Text>
               <Input
                 type="text"
                 placeholder="E-mail"
