@@ -25,6 +25,8 @@ namespace API.Controllers
         
         public async Task<IEnumerable<Student>> getStudent()
         {
+            // to add some delay so our page appears to be loading we will add a delay
+            await Task.Delay(1000);
             var students = await _context.Students.AsNoTracking().ToListAsync();
             return students;
         }

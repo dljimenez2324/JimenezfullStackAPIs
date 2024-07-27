@@ -32,6 +32,7 @@ interface Student {
 }
 
 const StudentSkeleton = () => {
+  
   // usestates to hold our data / states
   const [data, setData] = useState<Student[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -124,7 +125,7 @@ const StudentSkeleton = () => {
                     <HStack>
                       <SkeletonCircle>1</SkeletonCircle>
                       <SkeletonCircle>1</SkeletonCircle>
-                      <SkeletonCircle>1</SkeletonCircle>
+                      
                     </HStack>
                   </Td>
                 </Tr>
